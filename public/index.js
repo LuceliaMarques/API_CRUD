@@ -133,5 +133,3 @@ async function del(_id){
 }
 
 window.addEventListener("load", list());
-
-

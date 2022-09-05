@@ -7,7 +7,6 @@ let app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-// para entregar o public
 app.use(express.static("./public"));
 
 app.use(router);

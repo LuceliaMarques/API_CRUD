@@ -5,7 +5,6 @@ const users = {
     userData,
 }
 
-//Ler o arquivo JSON
 async function read(){
 
     users.userData = JSON.parse(await readFile("./dataBase/user.json"));

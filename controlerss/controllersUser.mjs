@@ -2,7 +2,6 @@ import { user } from "./User.mjs";
 import { users, write } from "../dataBase/repository.js";
 
 
-//Criar o user
 async function userCreate(req, res) {
 
     const { name, email } = req.body;
@@ -14,7 +13,6 @@ async function userCreate(req, res) {
 
 }
 
-//Lista todos os usuarios (exceto os com delete = false)
 async function userLister(req, res){
    
     const userAssistant = [];
@@ -27,7 +25,6 @@ async function userLister(req, res){
     return res.status(200).json(Object.values(userAssistant));
 }
 
-//Lista o usuário indicado pelo id
 async function userListerId(req, res){
 
     const userArr = users.userData;
@@ -35,7 +32,6 @@ async function userListerId(req, res){
     return res.json(userArr[index]);
 }
 
-//Deleta o usuario indicado pelo id
 async function userDelete(req, res) {
 
     const userArr = users.userData;
@@ -53,7 +49,6 @@ async function userDelete(req, res) {
     
 }
 
-//Edita o usuário indicado pelo id
 async function userUpdate(req, res) {
 
     const userArr = users.userData;
