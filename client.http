@@ -1,0 +1,27 @@
+POST http://localhost:8082/usuarios HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Lucel",
+    "email": "luceliatmf@gmail.com"
+}
+
+###
+GET http://localhost:8082/usuarios HTTP/1.1
+###
+
+GET http://localhost:8082/usuarios/3 HTTP/1.1
+###
+
+PUT http://localhost:8082/usuarios/2 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Lu",
+    "email": "luceliat@gmail.com"
+}
+###
+
+DELETE http://localhost:8082/usuarios/2 HTTP/1.1
+content-type: application/json
+###
